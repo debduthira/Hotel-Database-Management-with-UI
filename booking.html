@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Book Hotel</title>
+	<link rel="icon" type="image/x-icon"
+		href="https://www.freepnglogos.com/uploads/hotel-logo-png/hotel-bed-human-symbol-with-map-icon-download-29.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background-color: #85929E;">
+	<div class="bg-image"></div>
+	<div class="bg-text">
+		<h1 style="text-align: center; color: bisque;">
+			BOOK HOTEL
+		</h1>
+
+		<form style="display: flex; flex-direction: column; max-width: 800px; margin: 10px auto;">
+			<label>
+				Hotel Number
+			</label>
+			<input type="text" placeholder="Enter hotel number" style="margin: 5px 0 10px 0;" name="hId" />
+			<label>
+				Guest Number
+			</label>
+			<input type="text" placeholder="Enter guest number" style="margin: 5px 0 10px 0;" name="gId" />
+			<label>
+				Check In
+			</label>
+			<input type="date" style="margin: 5px 0 10px 0;" name="from" />
+			<label>
+				Check Out
+			</label>
+			<input type="date" style="margin: 5px 0 10px 0;" name="to" />
+			<button class="button">
+				Submit
+			</button>
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	console.log("Hotel input")
+	const form = document.getElementsByTagName("form")[0]
+
+	const handleSubmit = (e) => {
+		e.preventDefault()
+		const formData = new FormData(form);
+		const booking = {
+			hotelId: formData.get("hId"),
+			guestId: formData.get("gId"),
+			checkIn: formData.get("from"),
+			checkOut: formData.get("to"),
+		}
+
+		console.log(booking)
+		if (booking.checkIn > booking.checkOut) {
+			alert("Invalid data")
+		}
+	}
+
+	form.addEventListener("submit", handleSubmit)
+
+</script>
+
+</html>
