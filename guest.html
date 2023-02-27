@@ -2,55 +2,61 @@
 <html>
 
 <head>
-	<title>Add Guest</title>
-	<link rel="icon" type="image/x-icon"
-		href="https://www.freepnglogos.com/uploads/hotel-logo-png/hotel-bed-human-symbol-with-map-icon-download-29.png">
+  <title>Add Guest</title>
+  <link rel="icon" type="image/x-icon"
+    href="https://www.freepnglogos.com/uploads/hotel-logo-png/hotel-bed-human-symbol-with-map-icon-download-29.png">
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body style="background-color: #85929E;">
-	<div class="bg-image"></div>
-	<div class="bg-text">
-		<h1 style="text-align: center; color: bisque;">
-			ENTER GUEST DETAILS
-		</h1>
-
-		<form style="display: flex; flex-direction: column; max-width: 800px; margin: 10px auto;">
-			<label>
-				Name
-			</label>
-			<input type="text" placeholder="Enter full name" style="margin: 5px 0 10px 0;" name="name" />
-			<label>
-				Address
-			</label>
-			<textarea placeholder="Enter address" style="margin: 5px 0 10px 0;" name="address"></textarea>
-			<label>
-				Phone Number
-			</label>
-			<input type="number" placeholder="Enter phone number" style="margin: 5px 0 10px 0;" name="phone" />
-			<button class="button">
-				Submit
-			</button>
-		</form>
-	</div>
+  <div class="bg-image"></div>
+  <div class="bg-text">
+    <h1 style="text-align: center; color: bisque;">
+      ENTER GUEST DETAILS
+    </h1>
+    <a href="index.html">
+      <button style="position: absolute; top:5px; left: 5px; " class="button">
+        Back
+      </button>
+      <form method="post" action="guest.php"
+        style="display: flex; flex-direction: column; max-width: 800px; margin: 10px auto;">
+        <label>
+          Name
+        </label>
+        <input type="text" placeholder="Enter full name" style="margin: 5px 0 10px 0;" name="name" />
+        <label>
+          Address
+        </label>
+        <textarea placeholder="Enter address" style="margin: 5px 0 10px 0;" name="address"></textarea>
+        <label>
+          Phone Number
+        </label>
+        <input type="number" placeholder="Enter phone number" style="margin: 5px 0 10px 0;" name="phone" />
+        <button class="button">
+          Submit
+        </button>
+      </form>
+  </div>
 </body>
-<script type="text/javascript">
-	console.log("Hotel input")
-	const form = document.getElementsByTagName("form")[0]
+<!--
+  <script type="text/javascript">
+  console.log("Hotel input")
+  const form = document.getElementsByTagName("form")[0]
 
-	const handleSubmit = (e) => {
-		e.preventDefault()
-		const formData = new FormData(form);
-		const guest = {
-			name: formData.get("name"),
-			city: formData.get("address"),
-			phone: formData.get("phone"),
-		}
-		console.log(guest)
-	}
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const formData = new FormData(form);
+    const guest = {
+      name: formData.get("name"),
+      city: formData.get("address"),
+      phone: formData.get("phone"),
+    }
+    console.log(guest)
+  }
 
-	form.addEventListener("submit", handleSubmit)
+  form.addEventListener("submit", handleSubmit)
 
 </script>
+  -->
 
 </html>

@@ -2,68 +2,71 @@
 <html>
 
 <head>
-	<title>Input Hotel</title>
-	<link rel="icon" type="image/x-icon"
-		href="https://www.freepnglogos.com/uploads/hotel-logo-png/hotel-bed-human-symbol-with-map-icon-download-29.png">
+  <title>Input Hotel</title>
+  <link rel="icon" type="image/x-icon"
+    href="https://www.freepnglogos.com/uploads/hotel-logo-png/hotel-bed-human-symbol-with-map-icon-download-29.png">
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body style="background-color: #85929E;">
-	<div class="bg-image"></div>
-	<div class="bg-text">
-		<h1 style="text-align: center; color: bisque;">
-			ENTER HOTEL DETAILS
-		</h1>
-
-		<form style="display: flex; flex-direction: column; max-width: 800px; margin: 10px auto;">
-			<label>
-				Hotel Name
-			</label>
-			<input type="text" placeholder="Enter hotel name" style="margin: 5px 0 10px 0;" name="name" />
-			<label>
-				City
-			</label>
-			<input type="text" placeholder="Enter city" style="margin: 5px 0 10px 0;" name="city" />
-			<label>
-				Phone
-			</label>
-			<input type="number" placeholder="Enter phone number" style="margin: 5px 0 10px 0;" name="phone" />
-			<label>
-				Room Type
-			</label>
-			<select style="margin: 5px 0 10px 0;" name="room">
-				<option>Single bed AC</option>
-				<option>Double bed AC</option>
-			</select>
-			<label>
-				Price
-			</label>
-			<input type="number" placeholder="Enter room price" style="margin: 5px 0 10px 0;" name="price" />
-			<button class="button">
-				Submit
-			</button>
-		</form>
-	</div>
+  <div class="bg-image"></div>
+  <div class="bg-text">
+    <h1 style="text-align: center; color: bisque;">
+      ENTER HOTEL DETAILS
+    </h1>
+    <a href="index.html">
+      <button style="position: absolute; top:5px; left: 5px; " class="button">
+        Back
+      </button>
+      <form style="display: flex; flex-direction: column; max-width: 800px; margin: 10px auto;">
+        <label>
+          Hotel Name
+        </label>
+        <input type="text" placeholder="Enter hotel name" style="margin: 5px 0 10px 0;" name="name" />
+        <label>
+          City
+        </label>
+        <input type="text" placeholder="Enter city" style="margin: 5px 0 10px 0;" name="city" />
+        <label>
+          Phone
+        </label>
+        <input type="number" placeholder="Enter phone number" style="margin: 5px 0 10px 0;" name="phone" />
+        <label>
+          Room Type
+        </label>
+        <select style="margin: 5px 0 10px 0;" name="room">
+          <option>Single bed AC</option>
+          <option>Double bed AC</option>
+        </select>
+        <label>
+          Price
+        </label>
+        <input type="number" placeholder="Enter room price" style="margin: 5px 0 10px 0;" name="price" />
+        <button class="button">
+          Submit
+        </button>
+      </form>
+  </div>
 </body>
 
 <script type="text/javascript">
-	console.log("Hotel input")
-	const form = document.getElementsByTagName("form")[0]
+  console.log("Hotel input")
+  const form = document.getElementsByTagName("form")[0]
 
-	const handleSubmit = (e) => {
-		e.preventDefault()
-		const formData = new FormData(form);
-		const hotelDetails = {
-			name: formData.get("name"),
-			city: formData.get("city"),
-			phone: formData.get("phone"),
-			roomType: formData.get("room"),
-			price: formData.get("price")
-		}
-		console.log(hotelDetails)
-	}
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const formData = new FormData(form);
+    const hotelDetails = {
+      name: formData.get("name"),
+      city: formData.get("city"),
+      phone: formData.get("phone"),
+      roomType: formData.get("room"),
+      price: formData.get("price")
+    }
+    console.log(hotelDetails)
+  }
 
-	form.addEventListener("submit", handleSubmit)
+  form.addEventListener("submit", handleSubmit)
 
 </script>
 
